@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+  <context id="context1">
+    <plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
+    <commentGenerator>
+        <property name="suppressAllComments" value="true" />
+        <property name="addRemarkComments" value="true" />
+    </commentGenerator>
+    <jdbcConnection
+            connectionURL="jdbc:mysql://localhost:3306/template?characterEncoding=utf-8"
+            driverClass="com.mysql.cj.jdbc.Driver" 
+            userId="name"
+            password="password" >
+        	<property name="nullCatalogMeansCurrent" value="true" />
+    </jdbcConnection>
+    <javaModelGenerator targetPackage="cn.edu.zju.template.model" targetProject="template/src/main/java" />
+    <javaClientGenerator targetPackage="cn.edu.zju.template.mappers" targetProject="template/src/main/java" type="XMLMAPPER" />
+<!--     <table schema="template" tableName="table"> -->
+<!--     	<generatedKey column="column_id" sqlStatement="JDBC" identity="true" type="post"></generatedKey> -->
+<!--     </table> -->
+  </context>
+</generatorConfiguration>
